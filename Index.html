@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <title>Documento</title>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <form onsubmit="login(event)">
+        <span>
+            <label>Email</label>
+            <input 
+            type="email" 
+            id="email" 
+            required
+            placeholder="@email">
+        </span>
+        <span>
+            <label>Senha</label>
+            <input 
+            type="password" 
+            id="password" 
+            required
+            placeholder="senha">
+        </spam>
+        <span>
+            <button>Entrar</button>
+        </span>
+    </form>
+    <script>
+        let inpEmail = document.querySelector("#email")
+        let inpPassword = document.querySelector("#password")
+
+        let logEmail = 'carolinemota78@gmail.com';
+        let logPass = 'carol2000';
+
+        function login(event) {
+            event.preventDefault();
+            console.log(inpEmail.value)
+            console.log(inpPassword.value)
+
+            if(inpEmail.value === logEmail) {
+                document.querySelector('h1') .innerHTML = 'Email Certo'
+            } else{
+                document.querySelector('h1') .innerHTML = 'Email Errado'
+            
+            }
+            if(inpPassword.value === logPass) {
+                document.querySelector('h2') .innerHTML = 'Senha Certa'
+            } else{
+                document.querySelector('h2') .innerHTML = 'Senha Errada'
+            }
+        }
+    </script>
+</body>
+
+</html>
